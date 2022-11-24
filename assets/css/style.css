@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'MavenPro-VariableFont_wght';
+    src: url("../fonts/MavenPro-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'MavenPro-VariableFont_wght';
+    font-size: 10px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(8, 12vw);
+    grid-template-rows: 1.5vw repeat(4, 12vw) 1.5vw;
+    width: 100%;
+    height: 100%;
+    gap: 0.5vw;
+    grid-template-areas:
+        "h1 . p1 p2 p3 p4 p5 ."
+        "a1 a2 . . . . a9 a9"
+        ". . a6 . a5 . a9 a9"
+        "a8 a8 . a7 . a4 . ."
+        "a8 a8 . . . . a3 ."
+        "h2 . . . . p6 . .";
+}
+
+/*"Footer" Top textline*/
+.container h1:nth-child(1) {
+    grid-area: h1;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-left: 1vw;
+}
+
+.container p {
+    font-size: 1.2vw;
+    align-self: center;
+}
+
+.container p:nth-of-type(1) {
+    grid-area: p1;
+}
+
+.container p:nth-of-type(2) {
+    grid-area: p2;
+}
+
+.container p:nth-of-type(3) {
+    grid-area: p3;
+}
+
+.container p:nth-of-type(4) {
+    grid-area: p4;
+}
+
+.container p:nth-of-type(5) {
+    grid-area: p5;
+    font-weight: 900;
+}
+
+/*IMAGES*/
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container img:nth-child(7) {
+    grid-area: a1;
+}
+
+.container img:nth-child(8) {
+    grid-area: a2;
+}
+
+.container img:nth-child(9) {
+    grid-area: a3;
+}
+
+.container img:nth-child(10) {
+    grid-area: a4;
+}
+
+.container img:nth-child(11) {
+    grid-area: a5;
+}
+
+.container img:nth-child(12) {
+    grid-area: a6;
+}
+
+.container img:nth-child(13) {
+    grid-area: a7;
+}
+
+.container img:nth-child(14) {
+    grid-area: a8;
+}
+
+.container img:nth-child(15) {
+    grid-area: a9;
+}
+
+/* "FOOTER Bottom text" */
+.container h2:nth-child(16) {
+    grid-area: h2;
+    font-size: 1.5vw;
+    font-weight: 900;
+}
+
+.container p:nth-of-type(6) {
+    grid-area: p6;
+    font-style: oblique;
+}
